@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The sorting Ceremony</title>
+    <style>
+      body {
+        background-color: #dabd91;
+        color: #171d22;
+      }
+      .allContent {
+        margin: 0 auto;
+        max-width: 700px;
+        padding: 0px 10px;
+      }
+      h1 {
+        text-align: center;
+        color: #cc9426;
+        background: radial-gradient(
+          circle at 50.3% 44.5%,
+          rgb(48, 8, 6) 0%,
+          rgb(23, 29, 34) 100.2%
+        );
+        padding: 1px 40px;
+        margin: 5px 0px;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 35px;
+      }
+      span {
+        font-family: cursive;
+        font-size: 40px;
+      }
+      h2 {
+        text-align: center;
+        color: #601511;
+        font-size: 20px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border: 2px solid;
+        border-color: #442f19;
+        border-radius: 5px;
+      }
+      .speech {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      p1 {
+        text-align: center;
+        color: #601511;
+        line-height: 20px;
+        font-size: 18px;
+      }
+      p2 {
+        text-align: center;
+        color: #601511;
+        line-height: 20px;
+        font-size: 18px;
+      }
+      .hat {
+        transition: all 500ms / s ease-in-out;
+      }
+      .hat:hover {
+        cursor: pointer;
+        border-color: #cc9426;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 2px 20px;
+        font-size: 25px;
+        font-family: cursive;
+        color: #cc9426;
+        background: radial-gradient(
+          circle at 50.3% 44.5%,
+          rgb(30, 5, 4) 0%,
+          rgb(23, 29, 34) 100.2%
+        );
+        border-color: #442f19;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        transition: all 500ms / s ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        color: #171d22;
+        background: #cc9426;
+      }
+      div {
+        text-align: center;
+        color: #442f19;
+      }
+      a {
+        color: #601511;
+      }
+      a:hover {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="allContent">
+      <h1>Welcome to <span> Hogwarts </span></h1>
+      <h2>... it is time for the sorting ceremony to begin</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/120/original/IMG_4209.jpg?1676217878"
+        alt="The Hogwarts School crest"
+        width="120"
+      />
+      <div class="speech">
+        <p1>
+          <em
+            >"The sorting is a very important ceremony because, while you are
+            here, your house will be something like your family within Hogwarts"
+          </em>
+          Professor McGonagall
+        </p1>
+        <hr />
+        <p2>
+          <em
+            >"Now slip me snug about your ears, I've never yet been wrong, I'll
+            have a look inside your mind and tell where you belong!" </em
+          >The Sorting Hat
+        </p2>
+      </div>
+      <img
+        class="hat"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/818/original/sorting_hat_picture.jpeg?1676491859"
+        alt="The Hogwarts Sorting Hat"
+        width="450"
+      />
+      <button>Try on the Sorting Hat</button>
+      <hr />
+      <div>
+        Page created by Georgina Carlisle <br />
+        taking inspiration and text from the magical
+        <strong>Harry Potter</strong> series of books written by
+        <a href="https://www.jkrowling.com/" target="_blank">J.K.Rowling</a>
+      </div>
+    </div>
+    <script>
+      function updateHeading(newheading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newheading;
+      }
+      function updateHeadingTwo(newheadingTwo) {
+        let headingTwo = document.querySelector("h2");
+        headingTwo.innerHTML = newheadingTwo;
+      }
+      function houseSlytherin() {
+        updateHeading("In <strong>Slytherin</srong>");
+        updateHeadingTwo(
+          "you'll make your real friends, those cunning folk use any means to achieve their ends."
+        );
+      }
+      function houseGryffindor() {
+        updateHeading("In <strong>Gryffindor</srong> you belong");
+        updateHeadingTwo(
+          "where dwell the brave at heart, their chivalry set Gryffindors apart."
+        );
+      }
+      function houseRavenclaw() {
+        updateHeading("In wise old <strong>Ravenclaw</srong>");
+        updateHeadingTwo(
+          "if you've a ready mind, where those of wit and learning will always find their kind."
+        );
+      }
+      function houseHufflepuff() {
+        updateHeading("In <strong>Hufflepuff</srong> you belong");
+        updateHeadingTwo(
+          "where they are just and loyal, those patient Hufflepuffs are true and unafraid of toil."
+        );
+      }
+      function tryOnSortinghat() {
+        let chivalry = prompt(
+          "You are currently 2nd in a race when the leader trips and falls. Do you A-Run straight on past to win the race B-Stop to check your competitor is alright. Type in A or B to answer."
+        );
+        let veryClever = prompt(
+          "Can you solve this riddle? When asked how old she was, Karen replied, 'In 2 years I will be twice as old as I was 5 years ago.' How old is Karen?"
+        );
+        let anyMeans = prompt(
+          "Would you do whatever it takes to achieve your goals? Answer yes or no"
+        );
+        let bravery = prompt(
+          "You are faced with your worst nightmare, your heart beats and sweat begins to drip down your forehead. Do you A-Take a deep breath, stand a little taller and face your fears or B-Get yourself out of there as fast as you can. Type in A or B to answer."
+        );
+        anyMeans = anyMeans.toLowerCase().trim();
+        chivalry = chivalry.toUpperCase().trim();
+        veryClever = veryClever.trim();
+        bravery = bravery.toUpperCase().trim();
+        if (chivalry === "A" && anyMeans === "yes") {
+          houseSlytherin();
+        } else if (chivalry === "B" && bravery === "A") {
+          houseGryffindor();
+        } else if (veryClever === "12") {
+          houseRavenclaw();
+        } else {
+          houseHufflepuff();
+        }
+      }
+      function hatTalks() {
+        alert(
+          "There's nothing hidden in your head the sorting hat can't see, so try me on and I will tell you where you ought to be."
+        );
+      }
+      let sortingButton = document.querySelector("button");
+      sortingButton.addEventListener("click", tryOnSortinghat);
+      let hatPicture = document.querySelector(".hat");
+      hatPicture.addEventListener("click", hatTalks);
+    </script>
+  </body>
+</html>
