@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pancake Recipe</title>
+    <style>
+      body {
+        background: rgb(196, 187, 240, 0.4);
+        width: 100%;
+      }
+      #container {
+        max-width: 80%;
+        margin: auto;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 20px;
+      }
+      #instructionContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      #addATopping {
+        font-size: 80%;
+        margin: auto;
+        padding: 5px 20px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      #buttonContainer {
+        display: flex;
+        justify-content: space-between;
+      }
+      footer {
+        background: lightblue;
+        text-align: right;
+      }
+      @media screen and (max-width: 768px) {
+        #container {
+          max-width: 95%;
+        }
+      }
+      h1 {
+        background: radial-gradient(
+          circle at 50.3% 44.5%,
+          rgb(170, 151, 219) 0%,
+          rgb(92, 79, 127) 100.2%
+        );
+        border-radius: 5px;
+        padding: 0px 20px;
+        text-align: center;
+        font-size: 250%;
+        font-weight: 20px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 60%;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border: 2px solid;
+        border-color: #363b4e;
+        border-radius: 5px;
+      }
+      h2 {
+        color: #4f3b78;
+        font-size: 150%;
+      }
+      button {
+        border-color: #363b4e;
+        border-radius: 5px;
+        background: #b24cd5;
+        color: black;
+        font-size: 150%;
+        font-weight: 50px;
+        padding: 5px 10px;
+        transition: all 500ms / s ease-in-out;
+      }
+      button:hover {
+        cursor: pointer;
+        background: white;
+        color: #b24cd5;
+      }
+      p {
+        text-align: center;
+      }
+      a {
+        color: #b24cd5;
+      }
+      footer {
+        color: #927fbf;
+        padding: 10px 10px;
+        background: radial-gradient(
+          circle at 50.3% 44.5%,
+          rgb(71, 78, 102) 0%,
+          rgb(45, 49, 63) 100.2%
+        );
+      }
+      .fontChange {
+        font-family: cursive;
+      }
+      #lemonSugarButton {
+        box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
+      }
+      #strawberryCreamButton {
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+      }
+      #bananaChocolateButton {
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1 class="fontChange">How to make Pancakes</h1>
+        <p id="introduction">
+          <a href="https://en.wikipedia.org/wiki/Shrove_Tuesday" target="_blank"
+            >Shrove Tuesday</a
+          >
+          sees thousands of people making pancakes, but instead of buying
+          pre-made pancakes follow this recipe for added fun (can you do a
+          double flip?) and extra delicious pancakes.
+        </p>
+        <img
+          src="https://assets.dualit.com/images/article/70572-thin-pancakes.jpg"
+          alt="Image of pancakes"
+          id="pancakePicture"
+        />
+      </header>
+      <div id="instructionContainer">
+        <section id="ingredients">
+          <h2>Ingredients</h2>
+          <ul>
+            <li>100g Plain Flour</li>
+            <li>1 Egg</li>
+            <li>300ml Milk</li>
+            <li>oil</li>
+            <li id="extraIngredient"></li>
+            <li id="extraIngredientTwo"></li>
+          </ul>
+        </section>
+        <section id="method">
+          <h2>Method</h2>
+          <ol>
+            <li>
+              Weigh the flour into a small bowl and make a well in the centre.
+            </li>
+            <li>In a jug whisk the milk and egg together.</li>
+            <li>
+              Slowly add the milk and egg to the flour stirring as you do so.
+              Add only enough to make a thick paste initially and stir until
+              there are no lumps.
+            </li>
+            <li>
+              Heat a little oil in a frying pan running around the base and
+              sides. When the pan is hot pour off any excess oil.
+            </li>
+            <li>
+              Pour in just enough batter to thinly coat the base of the pan.
+            </li>
+            <li>
+              Once golden brown on the underside flip and continue to cook until
+              golden brown on both sides.
+            </li>
+            <li id="toppingMethod">Serve with a topping of your choice.</li>
+          </ol>
+        </section>
+      </div>
+      <hr />
+      <section id="addATopping">
+        <h2>
+          Click on a button to update the recipe for your preferred topping
+        </h2>
+        <div id="buttonContainer">
+          <button
+            class="fontChange"
+            id="lemonSugarButton"
+            onclick="lemonSugar()"
+          >
+            Lemon and Sugar
+          </button>
+          <button
+            class="fontChange"
+            id="strawberryCreamButton"
+            onclick="strawberryCream()"
+          >
+            Strawberries and Cream
+          </button>
+          <button
+            class="fontChange"
+            id="bananaChocolateButton"
+            onclick="bananaChocolate()"
+          >
+            Bananas and Chocolate
+          </button>
+        </div>
+      </section>
+    </div>
+    <footer>page created by Georgina Carlisle Feb 2023</footer>
+    <script>
+      function changeImage(newImage) {
+        const elem = document.getElementById("pancakePicture");
+        elem.src = newImage;
+      }
+      function updateHeading(newheading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newheading;
+      }
+      function updateIngredient(newingredient) {
+        let ingredient = document.getElementById("extraIngredient");
+        ingredient.innerHTML = newingredient;
+      }
+      function updateIngredientTwo(newingredienttwo) {
+        let ingredienttwo = document.getElementById("extraIngredientTwo");
+        ingredienttwo.innerHTML = newingredienttwo;
+      }
+      function updateMethod(newmethod) {
+        let method = document.getElementById("toppingMethod");
+        method.innerHTML = newmethod;
+      }
+
+      function lemonSugar() {
+        changeImage(
+          "https://www.31daily.com/wp-content/uploads/2020/02/md-Shrove-Tuesday-Pancakes-5-1-of-1a.jpg"
+        );
+        updateHeading("Pancakes with Lemon and Sugar");
+        updateIngredient("1 lemon");
+        updateIngredientTwo("1 tbsp Sugar");
+        updateMethod(
+          "Chop the lemon in half and squeeze over pancake then sprinkle with the sugar."
+        );
+      }
+      function strawberryCream() {
+        changeImage(
+          "https://www.curiouscuisiniere.com/wp-content/uploads/2014/04/DSCF9509.2.jpg"
+        );
+        updateHeading("Pancakes with Strawberries and Cream");
+        updateIngredient("a handful of Strawberries");
+        updateIngredientTwo("a generous helping of Squirty Cream");
+        updateMethod(
+          "Remove the tops off the strawberries and chop if desired before scattering over the pancake. Add the squirty cream and roll up your pancake. Extra option to sprinkle some icing sugar on top."
+        );
+      }
+      function bananaChocolate() {
+        changeImage(
+          "https://wearenotmartha.com/wp-content/uploads/Banana-Crepes-with-Nutella-Featured-500x500.jpg"
+        );
+        updateHeading("Pancakes with Bananas and Chocolate");
+        updateIngredient("half a banana");
+        updateIngredientTwo("50g Chocolate of your choice");
+        updateMethod(
+          "Break up the chocolate into small pieces and scatter over half of the pancake (these will melt with the heat of the pancake). Chop up the banana and spread the slices over pancake before folding the pancake over."
+        );
+      }
+    </script>
+  </body>
+</html>
