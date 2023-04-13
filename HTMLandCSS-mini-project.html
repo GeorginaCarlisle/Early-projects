@@ -391,43 +391,50 @@
         <br>
 
         <form>
-          <label for="name">Name:</label>
-          <input
+
+          <label for="name">
+            Name:
+            <input
             type="text"
             id="name"
             name="name"
             placeholder="Your Name"
             required>
-          <label for="e-mail">Email address:</label>
-          <input
+          </label>
+          
+          <label for="e-mail">
+            Email address:
+            <input
             type="email"
             id="email"
             name="email"
             placeholder="Email address"
             required>
+          </label>
+
           <br>
-          <label for="succulent-preference"
-            >Which type of Succulents are you interested in?</label>
-          <br>
-          <input
+
+          <p>Which type of Succulents are you interested in?</p>
+          
+          <label for="indoor-succulents"><input
             type="radio"
             name="succulent-preference"
             id="indoor-succulents"
             value="indoor-succulents"
-            required>
-          <label for="indoor-succulents">Indoor Succulents</label>
-          <input
+            required>Indoor Succulents</label>
+          
+          <label for="outdoor-succulents"><input
             type="radio"
             name="succulent-preference"
             id="outdoor-succulents"
-            value="outdoor-succulents">
-          <label for="outdoor-succulents">Outdoor Succulents</label>
-          <input
+            value="outdoor-succulents">Outdoor Succulents</label>
+          
+          <label for="both-succulents">
+            <input
             type="radio"
             name="succulent-preference"
             id="both-succulents"
-            value="both-succulents">
-          <label for="both-succulents">Both</label>
+            value="both-succulents">Both</label>
           <br>
           <input type="submit">
         </form>
