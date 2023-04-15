@@ -1,3 +1,27 @@
 body {
     background-color: aliceblue;
+    margin: 0;
+    text-align: center;
+}
+
+.project-container {
+    height: 400px;
+    margin: 5%;
+    border-radius: 5px;
+    border: 2px solid;
+}
+
+.webpage-image {
+    display: block;
+    float:left;
+    width: 40%;
+    border-radius: 5px;
+    margin: 0 auto;
+    height: inherit;
+}   
+
+.project-info-container {
+    float:right;
+    height: inherit;
+    width: 50%
 }
