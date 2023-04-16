@@ -7,9 +7,13 @@ body {
 a {
     text-decoration: none;
 }
+h1 {
+    font-size: 40px;
+    margin-top: 40px;
+}
 header p {
     font-size: 18px;
-    margin: 5%;
+    margin: 4%;
 }
 .project-container {
     height: 400px;
@@ -42,6 +46,12 @@ header p {
     height: 100px;
     width: 150px;
 }
+.certificate:hover {
+    height: 300px;
+    width: 450px;
+    position: relative;
+    bottom: 50%;
+}
 
 #title-sorting {
     color: #601511;
@@ -65,4 +75,11 @@ header p {
     h2 {
         margin: 0;
     }
+    .certificate:hover
+    {
+    height: 200px;
+    width: 300px;
+    position: relative;
+    bottom: 40%;
+}
 }
