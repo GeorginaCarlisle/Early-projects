@@ -4,8 +4,6 @@ body {
     text-align: center;
 }
 
-
-
 .project-container {
     height: 400px;
     margin: 5%;
@@ -25,7 +23,9 @@ body {
 .project-info-container {
     float:right;
     height: inherit;
-    width: 35%
+    width: 40%;
+    overflow: auto;
+    padding: 10px;
 }
 
 .certificate {
