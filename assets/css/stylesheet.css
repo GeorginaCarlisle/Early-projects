@@ -11,6 +11,9 @@ h1 {
     font-size: 40px;
     margin-top: 40px;
 }
+h2 {
+    text-decoration: underline;
+}
 header p {
     font-size: 18px;
     margin: 4%;
@@ -36,7 +39,7 @@ header p {
 }
 .project-info-container {
     float:right;
-    height: 380px;
+    height: 360px;
     width: 45%;
     overflow: auto;
     padding: 2%;
