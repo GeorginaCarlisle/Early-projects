@@ -1,11 +1,19 @@
 body {
-    background-color: aliceblue;
+    background-color: ;
     margin: 0;
     text-align: center;
+    
+}
+a {
+    text-decoration: none;
+}
+header p {
+    font-size: 18px;
+    margin: 5%;
 }
 .project-container {
     height: 400px;
-    margin: 5%;
+    margin: 0% 5% 5% 5%;
     border-radius: 5px;
     border: 2px solid;
 }
@@ -33,6 +41,16 @@ body {
 .certificate {
     height: 100px;
     width: 150px;
+}
+
+#title-sorting {
+    color: #601511;
+}
+#title-pancake {
+    color: #4f3b78;
+}
+#title-succulents {
+    color: #729613;
 }
 
  @media screen and (max-width: 800px){
