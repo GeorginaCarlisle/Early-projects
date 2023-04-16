@@ -12,25 +12,39 @@ body {
 .webpage-image {
     display: block;
     float:left;
-    width: 50%;
+    width: 47%;
     margin: 0 auto;
-    height: 370px;
-    padding: 15px;
+    height: 94%;
+    padding: 2%;
 }   
 .webpage-image a img {
-    height: 370px;
+    height: 94%;
     max-width: 100%;
     object-fit: contain;
 }
 .project-info-container {
     float:right;
     height: 380px;
-    width: 40%;
+    width: 45%;
     overflow: auto;
-    padding: 10px;
+    padding: 2%;
 }
 
 .certificate {
     height: 100px;
     width: 150px;
+}
+
+ @media screen and (max-width: 800px){
+    .project-info-container, .webpage-image {
+        float: none;
+        width: 96%;
+        height: 48%;
+    }
+    .project-container {
+    height: 600px;
+    } 
+    h2 {
+        margin: 0;
+    }
 }
