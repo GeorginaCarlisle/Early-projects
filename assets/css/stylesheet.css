@@ -3,26 +3,28 @@ body {
     margin: 0;
     text-align: center;
 }
-
 .project-container {
     height: 400px;
     margin: 5%;
     border-radius: 5px;
     border: 2px solid;
 }
-
 .webpage-image {
     display: block;
     float:left;
-    width: 55%;
-    border-radius: 5px;
+    width: 50%;
     margin: 0 auto;
-    height: inherit;
+    height: 370px;
+    padding: 15px;
 }   
-
+.webpage-image a img {
+    height: 370px;
+    max-width: 100%;
+    object-fit: contain;
+}
 .project-info-container {
     float:right;
-    height: inherit;
+    height: 380px;
     width: 40%;
     overflow: auto;
     padding: 10px;
